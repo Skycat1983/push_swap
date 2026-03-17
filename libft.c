@@ -6,73 +6,11 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:59:14 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/26 12:36:49 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/17 13:46:42 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*p;
-
-	p = s;
-	while (n--)
-		*p++ = 0;
-}
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*arr;
-
-	arr = malloc(nmemb * size);
-	if (!arr)
-		return (0);
-	ft_bzero(arr, nmemb * size);
-	return (arr);
-}
-
-static int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
-// ! atoi
-
-
-static int	is_whitespace(int c)
-{
-	return ((c >= 9 && c <= 13) || c == 32);
-}
-
-int	ft_atoi(const char *nptr)
-{
-	int		i;
-	long	sum;
-	int		sign;
-
-	i = 0;
-	while (is_whitespace((int)nptr[i]))
-		i++;
-	sign = 1;
-	if (nptr[i] == '-')
-		sign *= -1;
-	if (nptr[i] == '+' || nptr[i] == '-')
-		i++;
-	sum = 0;
-	while (ft_isdigit((int)nptr[i]))
-	{
-		sum = (nptr[i] - '0') + (sum * 10);
-		i++;
-	}
-	return ((int)sum * sign);
-}
-
-// ! ftsplit
-
-
 
 static char	**free_all(char **arr, int i)
 {
@@ -81,7 +19,6 @@ static char	**free_all(char **arr, int i)
 	free(arr);
 	return (0);
 }
-
 
 static int	count_words(char const *s, char c)
 {

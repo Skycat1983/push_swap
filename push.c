@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 10:18:08 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/25 10:18:38 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/17 13:50:02 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ void	pa(t_stack *b, t_stack *a)
 	}
 	a->arr[0] = tmp;
 	a->size++;
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack *a, t_stack *b)
 {
-	int tmp;
-	int i;
+	int	tmp;
+	int	i;
 
 	if (!a || a->size < 1)
 		return ;
-
 	tmp = a->arr[0];
 	i = 0;
 	while (i < a->size - 1)
@@ -61,4 +61,5 @@ void	pb(t_stack *a, t_stack *b)
 	}
 	b->arr[0] = tmp;
 	b->size++;
+	write(1, "pb\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:58:24 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/26 14:28:09 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/17 11:26:04 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,7 @@ int	main(int argc, char *argv[])
 	normalize_rank(&a);
 	if (has_dupes(&a))
 		return (destroy(a.arr, b.arr), write(2, "Error\n", 6), 1);
-	print_stack(&a);
-	printf("=========\n");
 	stack_radix(&a, &b);
-	print_stack(&a);
-	printf("=========\n");
-
 	destroy(a.arr, b.arr);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 10:16:26 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/25 10:16:45 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/17 13:51:32 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	sa(t_stack *a)
 	tmp = a->arr[0];
 	a->arr[0] = a->arr[1];
 	a->arr[1] = tmp;
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack *b)
@@ -32,6 +33,7 @@ void	sb(t_stack *b)
 	tmp = b->arr[0];
 	b->arr[0] = b->arr[1];
 	b->arr[1] = tmp;
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_stack *a, t_stack *b)

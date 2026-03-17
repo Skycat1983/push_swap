@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_log.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/25 10:22:40 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/25 11:07:29 by helaouta         ###   ########.fr       */
+/*   Created: 2026/03/17 13:46:31 by helaouta          #+#    #+#             */
+/*   Updated: 2026/03/17 13:57:22 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a(t_stack *b, t_stack *a)
+static void	ft_bzero(void *s, size_t n)
 {
-	pa(b, a);
-	write(1, "pa\n", 3);
+	unsigned char	*p;
+
+	p = s;
+	while (n--)
+		*p++ = 0;
 }
 
-void	push_b(t_stack *a, t_stack *b)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	pb(a, b);
-	write(1, "pb\n", 3);
+	void	*arr;
+
+	arr = malloc(nmemb * size);
+	if (!arr)
+		return (0);
+	ft_bzero(arr, nmemb * size);
+	return (arr);
 }

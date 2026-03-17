@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 11:16:06 by helaouta          #+#    #+#             */
-/*   Updated: 2026/02/26 12:35:56 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/17 13:52:12 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ int	has_dupes(t_stack *a)
 
 int	is_sorted(t_stack *a)
 {
-	int *arr;
-	int size;
-	int i;
-	int left;
-	int right;
+	int		*arr;
+	int		size;
+	int		i;
+	int		left;
+	int		right;
 
 	i = 0;
 	arr = a->arr;
