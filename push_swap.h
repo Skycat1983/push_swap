@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:58:46 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/17 14:05:46 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/18 13:32:06 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		is_sorted(t_stack *a);
 char	**ft_split(char const *s, char c);
 
 //! atoi
-int		ft_atoi(const char *nptr);
+int		ft_atoi(const char *nptr, int *error);
 
 //! calloc
 void	*ft_calloc(size_t nmemb, size_t size);
