@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 11:20:41 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/17 13:56:25 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/18 16:16:22 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ int	stack_radix(t_stack *a, t_stack *b)
 	{
 		moves += pass_a_for_bit(a, b, bit);
 		moves += drain_b_to_a(b, a);
+		if (is_sorted(a))
+			break ;
 		bit++;
 	}
 	return (0);
