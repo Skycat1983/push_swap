@@ -6,16 +6,18 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 13:45:46 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/18 13:45:43 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/18 14:40:37 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_isdigit(int c)
+static int	ft_isdigit(int c, int *error)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
+	if (c != '\0')
+		(*error) += 1;
 	return (0);
 }
 
@@ -43,7 +45,7 @@ int	ft_atoi(const char *nptr, int *error)
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
 	sum = 0;
-	while (ft_isdigit((int)nptr[i]))
+	while (ft_isdigit((int)nptr[i], error))
 	{
 		sum = (nptr[i] - '0') + (sum * 10);
 		i++;
