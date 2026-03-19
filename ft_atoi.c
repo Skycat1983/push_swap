@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 13:45:46 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/18 14:40:37 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:45:09 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *nptr, int *error)
 	long	sum;
 	int		sign;
 	long	max;
-	long 	min;
+	long	min;
 
 	max = 2147483647;
 	min = -2147483648;

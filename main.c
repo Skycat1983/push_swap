@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:58:24 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/19 11:22:52 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:45:38 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	init(t_stack *a, t_stack *b, int size, int *values)
 	return (1);
 }
 
-static void sort_controller(t_stack *a, t_stack *b)
+static void	sort_controller(t_stack *a, t_stack *b)
 {
 	if (a->size <= 3)
 	{
