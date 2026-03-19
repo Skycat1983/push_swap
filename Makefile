@@ -11,7 +11,8 @@ SRC = main.c \
 	  rrotate.c \
 	  push.c \
 	  libft.c \
-	  sort.c \
+	  radix_sort.c \
+	  short_sort.c \
 	  bits.c \
 	  ft_atoi.c \
 	  ft_calloc.c

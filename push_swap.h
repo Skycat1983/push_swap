@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:58:46 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/18 13:32:06 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:20:02 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,16 @@ int		ft_atoi(const char *nptr, int *error);
 //! calloc
 void	*ft_calloc(size_t nmemb, size_t size);
 
-//! Sort
-size_t	is_bit_set(unsigned long long number, size_t bit);
-int		stack_radix(t_stack *stack_a, t_stack *stack_b);
-
-//! bits
+//! bit helpers
 size_t	is_bit_set(unsigned long long number, size_t bit);
 int		calc_bit_passes(t_stack *stack_a);
+
+//! radix sort
+void	stack_radix(t_stack *stack_a, t_stack *stack_b);
+
+//! short sort
+void	sort_three(t_stack *a);
+void	sort_five(t_stack *a, t_stack *b);
 
 // ! Mutations
 // swap

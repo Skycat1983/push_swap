@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 11:20:41 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/18 16:16:22 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:11:39 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,22 +76,21 @@ static int	drain_b_to_a(t_stack *b, t_stack *a)
 **
 ** Returns 0 (you can change to return move count if you want).
 */
-int	stack_radix(t_stack *a, t_stack *b)
+void	stack_radix(t_stack *a, t_stack *b)
 {
 	int	bit;
 	int	total_bits;
-	int	moves;
 
 	total_bits = calc_bit_passes(a);
 	bit = 0;
-	moves = 0;
 	while (bit < total_bits)
 	{
-		moves += pass_a_for_bit(a, b, bit);
-		moves += drain_b_to_a(b, a);
+		pass_a_for_bit(a, b, bit);
+		drain_b_to_a(b, a);
 		if (is_sorted(a))
 			break ;
 		bit++;
 	}
-	return (0);
 }
+
+

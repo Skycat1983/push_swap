@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 14:59:14 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/17 13:46:42 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:17:44 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	next_word_len(char const *s, char c)
+static int	next_word_len(char const *s, char c)
 {
 	int	i;
 	int	l;
