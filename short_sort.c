@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 10:54:45 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/19 11:10:35 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 12:05:26 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void	sort_three(t_stack *a)
 	x = a->arr[0];
 	y = a->arr[1];
 	z = a->arr[2];
-
 	if (x > y && y < z && x < z)
 		sa(a);
 	else if (x > y && y > z)
@@ -86,29 +85,23 @@ void	sort_five(t_stack *a, t_stack *b)
 {
 	if (a->size <= 1 || is_sorted(a))
 		return ;
-
 	if (a->size == 2)
 	{
 		if (a->arr[0] > a->arr[1])
 			sa(a);
 		return ;
 	}
-
 	if (a->size == 3)
 	{
 		sort_three(a);
 		return ;
 	}
-
-	// size 4 or 5
 	while (a->size > 3)
 	{
 		move_min_to_top(a);
 		pb(a, b);
 	}
-
 	sort_three(a);
-
 	while (b->size > 0)
 		pa(b, a);
 }

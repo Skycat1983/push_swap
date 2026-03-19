@@ -6,7 +6,7 @@
 /*   By: helaouta <helaouta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 11:24:49 by helaouta          #+#    #+#             */
-/*   Updated: 2026/03/18 13:41:55 by helaouta         ###   ########.fr       */
+/*   Updated: 2026/03/19 12:04:15 by helaouta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,23 @@ int	*parse_input(char *argv[], int *size)
 	int		*values;
 	char	**str;
 	int		i;
-	int		words;
 	int		error;
 
 	error = 0;
 	str = ft_split(argv[1], ' ');
-	words = 0;
-	while (str && str[words])
-		words++;
-	values = malloc(sizeof(int) * words);
+	*size = 0;
+	while (str && str[*size])
+		(*size)++;
+	values = malloc(sizeof(int) * (*size));
 	if (!values)
-	{
-		free_split(str);
-		return (NULL);
-	}
+		return (free_split(str), NULL);
 	i = 0;
-	while (i < words)
+	while (i < *size)
 	{
 		values[i] = ft_atoi(str[i], &error);
 		i++;
 	}
 	free_split(str);
-	*size = words;
 	if (error > 0)
 		return (free(values), NULL);
 	return (values);
@@ -63,23 +58,19 @@ int	*parse_inputs(int argc, char *argv[], int *size)
 {
 	int		*values;
 	int		i;
-	int		words;
 	int		error;
 
 	error = 0;
-	words = 1;
-	while (words < argc - 1)
-		words++;
-	values = malloc(sizeof(int) * words);
+	*size = argc - 1;
+	values = malloc(sizeof(int) * (*size));
 	if (!values)
 		return (NULL);
 	i = 0;
-	while (i < words)
+	while (i < *size)
 	{
 		values[i] = ft_atoi(argv[i + 1], &error);
 		i++;
 	}
-	*size = words;
 	if (error > 0)
 		return (free(values), NULL);
 	return (values);
